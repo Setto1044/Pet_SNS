@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<script>
+		function check_input() {
+			if (!document.postfeed.upfile.value)
+			{
+				alert("사진을 첨부하세요");    
+				document.postfeed.upfile.focus();
+				return;
+			}
+			if (!document.postfeed.comment.value)
+			{
+				alert("내용을 입력하세요!");    
+				document.postfeed.coment.focus();
+				return;
+			}
+			document.postfeed.submit();
+		}
+	</script>
+<style>
+	span{
+		font-size: 20px;
+	}
+	button{
+			background-color: #9370DB;
+			width:100px;
+			padding: 5px;
+			border: none;
+			color:#fff;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 15px;
+			margin: auto;
+			cursor: pointer;
+		}
+</style>
+</head>
+<body>
+	<div>
+		<form  name="postfeed" method="post" action="upload_image.php" enctype="multipart/form-data">
+			<ul>
+				<li>
+					<span>이름 : </span>
+					<span><?=$petname?></span>
+				</li>		
+				<li>
+					<span> 첨부 파일</span>
+					<span><input type="file" name="upfile"></span>
+				</li>	    	
+				<li>	
+					<span>내용 : </span>
+					<span>
+						<textarea name="comment" rows="10" cols="60"></textarea>
+					</span>
+				</li>
+
+			</ul>
+			<ul>
+				<li>
+					<button type="button" onclick="check_input()">완료</button>
+					<button type="button" onclick="location.href='post.php'">입력 취소</button>
+				</li>
+			</ul>
+		</form>
+	</div> <!-- board_box -->
+
+
+
+</body>
+</html>

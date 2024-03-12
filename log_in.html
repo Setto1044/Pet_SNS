@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src = "./js/login.js"></script>
+	<title>WhyNabong SNS</title>
+	<style>
+		h1{
+			font-size: 50px;
+			color : white;
+		}
+		h2{
+			font-size: 40px;
+			color : white;u
+		}
+		h3{
+			font-size: 30px;
+			color : black;
+		}
+		h4{
+			font-size: 15px;
+			color : white;
+		}
+		table.logtable {
+			border: ;
+			border-collapse: collapse;
+			text-align: left;
+			width: 200px;
+			height: 40px;
+			line-height: 10px;
+			border-left: 3px ;
+			margin : 50px 10px;
+		}
+		a{
+			text-decoration-line: none;
+		}
+		button {
+			width:70px;
+			background-color: #CC66CC;
+			border: none;
+			color:#fff;
+			padding: 10px 0;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 10px;
+			margin: 4px;
+			cursor: pointer;
+
+		}
+		.section_label {
+			font-size:20px;
+		}
+
+		.section_input {
+			font-size:20px;
+		}
+		form {
+			display: flex; 
+			flex-direction: column;
+		}
+
+	</style>
+</head>
+
+<body bgcolor="F5EFFB">
+	<!-- 로그인 전체디자인 -->
+	<table align="center" border="0" cellpadding="0" cellspacing="0" width="100">
+		<tr>
+			<!-- 윗 로고 사진 -->
+			<td align="center" bgcolor="#CCCCCFF" style="padding: 5px 5px 5px 5px;">
+				<img src="whynab.png"  width="150" height="160" style="display: block;" />
+			</td>
+			<td>
+				<!-- 윗 로고 사이트명, 하이퍼링크-->
+				<table align="center" border="0" cellpadding="0" cellspacing="0" width="50" bgcolor="#CCCCCFF" style="padding: 10px 50px 10px 50px;">
+					<tr>
+						<td align="center" >
+							<a href="log_in.html">
+								<img src="mainlogo.png"  width="400" height="340" style="display: block;" />
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<!-- 로그인 박스 -->
+				<td align="left" bgcolor="#FFFFF9" style="padding: 5px 5px 5px 5px;" colspan="2">
+					<h3>로그인</h3>
+					<form name = "login" method="post" action="member_check.php">
+						<span class="section_label">아이디</span>
+						<input class="section_input" type="text" name="id">
+						
+						<span  class="section_label" >비밀번호</span>
+						<input  class="section_input" type="Password" name="pw">
+
+						<input type="button" value="로그인" onclick="check_input()"  style="margin-top: 20px">
+
+					</form>
+
+				</td>
+			</tr>
+			<tr>
+				<!-- 회원가입 -->
+				<td bgcolor="#CC99CC" colspan="2">
+					<a href="register.php">
+						<h4>&nbsp회원가입</h4>
+					</a>
+
+				</td>
+			</tr>
+		</table>
+	</body>
+	</html>

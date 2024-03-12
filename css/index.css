@@ -1,0 +1,40 @@
+body { 
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "feed banner"
+    "footer footer";
+    grid-template-rows: 210px 10px 1fr 60px;
+    grid-template-columns: 1fr 20%;
+    grid-gap: 10px;
+    grid-gap-color: #ffffff;
+    height: 100vh;
+    margin: 0;
+}
+header, footer, article, div {
+    background: #F5EFFB;
+}
+
+#pageHeader {
+    width: 100%;
+    position: fixed;
+    grid-area: header;
+    z-index: 3;
+}
+#pageFooter {
+    grid-area: footer;
+}
+#mainArticle { 
+    grid-area: feed;     
+}
+#mainNav { 
+    background-color: #ffffff;
+    grid-area: nav;
+
+}
+#banner { 
+    background-color: #F5EFFB;
+    grid-area: banner; 
+    z-index: 1;
+}
